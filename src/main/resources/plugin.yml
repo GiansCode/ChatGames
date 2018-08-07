@@ -1,0 +1,11 @@
+name: ChatGames
+version: ${project.version}
+author: Mas281
+
+main: io.samdev.chatgames.ChatGames
+
+depend: [PlaceholderAPI]
+
+commands:
+  chatgames:
+    aliases: [cg]

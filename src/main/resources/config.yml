@@ -1,0 +1,67 @@
+# Permissions:
+# chatgames.command.main
+# chatgames.command.reload
+# chatgames.command.wins
+# chatgames.command.wins.others
+# chatgames.command.top
+# chatgames.command.start
+# chatgames.command.stop
+# chatgames.command.toggle
+
+# MySQL credentials
+sql:
+  host: 127.0.0.1
+  port: 3306
+  database: database
+  username: username
+  password: password
+
+# All units are in seconds
+settings:
+  round_interval: 60
+  round_length: 30
+
+  players_needed: 4
+
+  disallowed_worlds:
+  - "world_nether"
+  - "world_the_end"
+
+messages:
+  no_permission: "&cYou don't have permission"
+  no_console: "&cOnly players can use this command"
+
+  command_main_executed:
+  - "&aRunning &eChatGames &aversion &e{version} &aby &e{author}"
+  - "&aHash: &e{truncated_hash}"
+  command_main_usage:
+  - "&cInvalid Subcommand:"
+  - "&a/chatgames reload"
+  - "&a/chatgames wins [player]"
+  - "&a/chatgames top"
+  - "&a/chatgames start"
+  - "&a/chatgames stop"
+  - "&a/chatgames toggle"
+
+  command_reload_executed: "&aPlugin reloaded successfully"
+
+  command_start_executed: "&aChatGames are now enabled"
+  command_start_already_enabled: "&eChatGames are already enabled"
+
+  command_stop_executed: "&cChatGames are now disabled"
+  command_stop_already_disabled: "&eChatGames are already disabled"
+
+  command_wins_usage: "&cUsage: /chatgames wins [player]"
+  command_wins_not_found: "&cThat player could not be found"
+  command_wins_self: "&aYou have &e{wins} &awins"
+  command_wins_others: "&e{player} &ahas &e{wins} &awins"
+
+  command_toggle_enabled: "&aYou are now participating in ChatGames"
+  command_toggle_disabled: "&cYou are no longer participating in ChatGames"
+
+  command_top_format: "&a#&e{position} &a- &e{player} &a- &e{wins} &awins"
+
+  game_end:
+  - "&f"
+  - "&e[Chat Games] &bThe game ended! The answer was &f{answer}"
+  - "&f"

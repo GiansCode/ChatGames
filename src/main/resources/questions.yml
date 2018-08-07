@@ -1,0 +1,13 @@
+questions:
+  example_1:
+    question:
+    - "&f"
+    - "&e[Chat Games] &fWhat is 5*2+1?"
+    - "&f"
+    answers:
+    - "11"
+    case_sensitive: false
+    rewards:
+    - "[console] eco give {player} 100"
+    - "[player] balance"
+    - "[broadcast] &e[Chat Games] &f{player} got $100 for answering the question in {time} seconds"
