@@ -7,7 +7,7 @@ questions:
     answers:
     - "11"
     case_sensitive: false
-    rewards:
-    - "[console] eco give {player} 100"
-    - "[player] balance"
-    - "[broadcast] &e[Chat Games] &f{player} got $100 for answering the question in {time} seconds"
+    actions:
+    - "[CONSOLECOMMAND] eco give {player} 100"
+    - "[PLAYERCOMMAND] balance"
+    - "[BROADCAST] &e[Chat Games] &f{player} got the correct answer of 11 in {time} seconds!"
