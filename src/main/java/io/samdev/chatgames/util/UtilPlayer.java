@@ -1,6 +1,6 @@
 package io.samdev.chatgames.util;
 
-import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_14_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 public final class UtilPlayer

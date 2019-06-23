@@ -2,9 +2,9 @@ name: ChatGames
 version: ${project.version}
 author: Mas281
 
+depend: [ActionUtil, PlaceholderAPI]
 main: io.samdev.chatgames.ChatGames
-
-depend: [PlaceholderAPI]
+api-version: 1.14
 
 commands:
   chatgames:

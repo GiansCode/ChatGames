@@ -50,7 +50,7 @@ public class ChatGamesConfig
 
     private final Set<World> disallowedWorlds;
 
-    public boolean isAllowedWorld(World world)
+    boolean isAllowedWorld(World world)
     {
         return !disallowedWorlds.contains(world);
     }

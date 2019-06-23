@@ -4,7 +4,7 @@ import io.samdev.chatgames.game.ChatGame;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class ChatGameEvent extends Event
+public abstract class ChatGameEvent extends Event
 {
     private static final HandlerList handlers = new HandlerList();
 

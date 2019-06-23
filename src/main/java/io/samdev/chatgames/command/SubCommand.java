@@ -3,7 +3,6 @@ package io.samdev.chatgames.command;
 import io.samdev.chatgames.ChatGames;
 import io.samdev.chatgames.util.Message;
 import io.samdev.chatgames.util.Permission;
-import org.apache.commons.lang3.ArrayUtils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -19,16 +18,24 @@ public abstract class SubCommand
     {
         this.plugin = plugin;
 
-        assert aliases.length != 0 : "At least one alias must be provided";
+        assert aliases.length != 0 : "at least one alias must be provided";
 
         this.usageMessage = usageMessage;
         this.permission = permission;
         this.aliases = aliases;
     }
 
-    boolean isAlias(String alias)
+    boolean isAlias(String input)
     {
-        return ArrayUtils.contains(aliases, alias);
+        for (String alias: aliases)
+        {
+            if (alias.equalsIgnoreCase(input))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     boolean hasPermission(CommandSender sender, boolean inform)

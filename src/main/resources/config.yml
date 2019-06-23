@@ -1,3 +1,6 @@
+# Breaking changes in 2.0 update:
+# - "rewards" replaced with "actions" in questions.yml, taking an ActionUtil string
+
 # Permissions:
 # chatgames.command.main
 # chatgames.command.reload

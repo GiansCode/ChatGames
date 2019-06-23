@@ -81,9 +81,7 @@ public class ChatGamesCommand implements CommandExecutor
     {
         Message.COMMAND_MAIN_EXECUTED.send(sender,
             "version", plugin.getDescription().getVersion(),
-            "author", plugin.getDescription().getAuthors().get(0),
-            "hash", plugin.getFileHash(),
-            "truncated_hash", plugin.getTruncatedHash()
+            "author", plugin.getDescription().getAuthors().get(0)
         );
     }
 }

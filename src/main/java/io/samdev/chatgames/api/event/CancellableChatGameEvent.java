@@ -3,7 +3,7 @@ package io.samdev.chatgames.api.event;
 import io.samdev.chatgames.game.ChatGame;
 import org.bukkit.event.Cancellable;
 
-public class CancellableChatGameEvent extends ChatGameEvent implements Cancellable
+public abstract class CancellableChatGameEvent extends ChatGameEvent implements Cancellable
 {
     CancellableChatGameEvent(ChatGame game)
     {

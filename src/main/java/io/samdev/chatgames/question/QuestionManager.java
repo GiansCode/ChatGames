@@ -66,9 +66,8 @@ public class QuestionManager
         List<String> answers = section.getStringList("answers");
         boolean caseSensitive = section.getBoolean("case_sensitive");
 
-        List<String> rewards = section.getStringList("rewards");
-        rewards.replaceAll(Chat::colour);
+        List<String> actions = section.getStringList("actions");
 
-        questions.add(new Question(name, question, answers, caseSensitive, rewards));
+        questions.add(new Question(name, question, answers, caseSensitive, actions));
     }
 }

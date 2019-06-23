@@ -27,7 +27,7 @@ public class ChatGame
         return ended;
     }
 
-    public Question getQuestion()
+    Question getQuestion()
     {
         return question;
     }

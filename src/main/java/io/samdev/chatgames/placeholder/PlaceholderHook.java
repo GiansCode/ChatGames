@@ -2,20 +2,24 @@ package io.samdev.chatgames.placeholder;
 
 import io.samdev.chatgames.ChatGames;
 import io.samdev.chatgames.data.PlayerRecord;
-import me.clip.placeholderapi.external.EZPlaceholderHook;
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
 
 import java.util.List;
 
-public class PlaceholderHook extends EZPlaceholderHook
+public class PlaceholderHook extends PlaceholderExpansion
 {
     private final ChatGames plugin;
 
     public PlaceholderHook(ChatGames plugin)
     {
-        super(plugin, "chatgames");
-
         this.plugin = plugin;
+    }
+
+    @Override
+    public String getIdentifier()
+    {
+        return "chatgames";
     }
 
     @Override
@@ -35,7 +39,7 @@ public class PlaceholderHook extends EZPlaceholderHook
         }
         else
         {
-            if (identifier.startsWith("chatgames_top_name_"))
+            if (identifier.startsWith("top_name_"))
             {
                 int position = Integer.parseInt(identifier.split("chatgames_top_name_")[1]);
 
@@ -54,7 +58,7 @@ public class PlaceholderHook extends EZPlaceholderHook
                 return leaderboard.get(position - 1).getPlayerName();
             }
 
-            if (identifier.startsWith("chatgames_top_wins_"))
+            if (identifier.startsWith("top_wins_"))
             {
                 int position = Integer.parseInt(identifier.split("chatgames_top_wins_")[1]);
 
@@ -75,5 +79,29 @@ public class PlaceholderHook extends EZPlaceholderHook
         }
 
         return null;
+    }
+
+    @Override
+    public String getAuthor()
+    {
+        return plugin.getDescription().getAuthors().get(0);
+    }
+
+    @Override
+    public String getVersion()
+    {
+        return plugin.getDescription().getVersion();
+    }
+
+    @Override
+    public boolean persist()
+    {
+        return true;
+    }
+
+    @Override
+    public boolean canRegister()
+    {
+        return true;
     }
 }
